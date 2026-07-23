@@ -1,4 +1,6 @@
-const apiUrl = 'http://localhost:5000/todos';
+// Relative path: the frontend is served by the same Express server as the
+// API (see src/app.js), so this works regardless of host/port.
+const apiUrl = '/todos';
 
 const todoList = document.getElementById('todoList');
 const todoInput = document.getElementById('todoInput');
