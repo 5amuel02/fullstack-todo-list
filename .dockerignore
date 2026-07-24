@@ -1,0 +1,9 @@
+node_modules
+.git
+.gitignore
+.env
+*.log
+tests
+.github
+README.md
+DEPLOY.md

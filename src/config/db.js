@@ -7,6 +7,8 @@ const mysql = require('mysql2/promise');
 // not for anything that has to stay up.
 const pool = mysql.createPool({
     host: process.env.DB_HOST || 'localhost',
+    // Cloud MySQL (Railway, Aiven, PlanetScale) often exposes a non-3306 port.
+    port: Number(process.env.DB_PORT) || 3306,
     user: process.env.DB_USER || 'root',
     password: process.env.DB_PASSWORD || '',
     database: process.env.DB_NAME || 'todolist',
